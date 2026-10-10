@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom range slider styling for video seekbar and volume */
+input[type="range"] {
+  accent-color: #6366f1;
+}
+
+/* Prevent unwanted mobile pull-to-refresh on custom gesture player */
+.player-container {
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* TV screen bezel animation glow */
+@keyframes tv-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.tv-active-glow {
+  box-shadow: 0 0 50px -10px rgba(99, 102, 241, 0.45);
+}
